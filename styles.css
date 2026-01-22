@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding-top: 50px;
+    padding-right: 400px;
+    padding-left: 400px;
+}
+#categoriesContainerDiv{
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    max-height: auto;
+
+}
+#toDoCategoryDiv{
+    background-color: red;
+    flex-grow: 1;
+}
+#inProgressCategoryDiv{
+    background-color: green;
+    flex-grow: 1;
+}
+#underReviewCategoryDiv{
+    background-color: blue;
+    flex-grow: 1;
+}
+#finishedCategoryDiv{
+    background-color: orange;
+    flex-grow: 1;
+}
+
+.category{
+    margin: 10px 10px 10px 10px;
+}
+
+.categoryTitleAndLogoContainerDiv{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    min-height: 5%;
+    padding: 10px 10px 10px 10px;
+    
+
+}
+
+.categoryTitleDiv{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    min-height: 10px;
+    min-width: 150px;
+    
+}
+
+.categoryLogoDiv{
+    border: 1px solid black;
+    min-height: 10px;
+    min-width: 30px;
+    display: flex;
+}
+
+.logoImg{
+    display: block;
+    margin: auto;
+}
