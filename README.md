@@ -1,14 +1,12 @@
 # Taskify
 
-- Create a Task Management Application with drag-drop functionality between the category.
+> A Task Management Application created using DOM Manipulation.
 
-- you can avoid time, and type of TODO (easy, medium, hard).
-
-
-- The UI should resemble the example shown below..
-
-![Image](https://utfs.io/f/c63f4dc5-6833-4c65-9b07-e1421d833ee2-ng18dw.png)
+- Drag and Drop functionality available between 4 categories.
+- A testing version where functionality related to adding time and date doesn't work for now.
+- Will create advanced versions of taskify app when I learn React Library.
 
 
 
-### Don't copy UI as it is, only take reference from it.
+
+
