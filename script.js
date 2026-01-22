@@ -100,6 +100,35 @@ underReviewCategoryDiv.appendChild(categoryTitleAndLogoContainerDivForThirdCat);
 
 
 
+const thirdCatContentContainerDiv = document.createElement("div");
+thirdCatContentContainerDiv.setAttribute("id", "thirdCatContentContainerDiv")
+const thirdCatTasksContainerDiv = document.createElement("div");
+thirdCatTasksContainerDiv.setAttribute("id", "thirdCatTasksContainerDiv");
+const thirdCatButtonDiv = document.createElement("div");
+thirdCatButtonDiv.setAttribute("id", "thirdCatButtonDiv")
+thirdCatButtonDiv.setAttribute("class", "addTaskButtonDiv")
+thirdCatButtonDiv.innerHTML = "Add new";
+
+thirdCatContentContainerDiv.appendChild(thirdCatTasksContainerDiv);
+thirdCatContentContainerDiv.appendChild(thirdCatButtonDiv);
+
+thirdCatButtonDiv.addEventListener("click", ()=>{
+    const parentDiv = thirdCatButtonDiv.parentNode;
+    console.log(parentDiv)
+    const firstChildOfParentDiv  = parentDiv.firstChild;
+    const createdTask = createTask();
+    firstChildOfParentDiv.appendChild(createdTask);
+    })
+
+underReviewCategoryDiv.appendChild(thirdCatContentContainerDiv);
+
+
+
+
+
+
+
+
 
     //creating for finished Category
 const categoryTitleAndLogoContainerDivForFourthCat = document.createElement("div");
