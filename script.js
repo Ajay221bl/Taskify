@@ -39,7 +39,7 @@ categoryTitleDivForFirstCat.innerHTML = "To Do"
 const categoryLogoDivForFirstCat = document.createElement("div");
 categoryLogoDivForFirstCat.setAttribute("class", "categoryLogoDiv");
 const logoImgFirstCat = document.createElement("img");
-logoImgFirstCat.setAttribute("src", "icons/grip-vertical.png");
+logoImgFirstCat.setAttribute("src", "icons/menu.png");
 logoImgFirstCat.setAttribute("class", "logoImg");
 
 categoryLogoDivForFirstCat.appendChild(logoImgFirstCat);
@@ -58,17 +58,29 @@ const firstCatContentContainerDiv = document.createElement("div");
 firstCatContentContainerDiv.setAttribute("id", "firstCatContentContainerDiv")
 const firstCatTasksContainerDiv = document.createElement("div");
 firstCatTasksContainerDiv.setAttribute("id", "firstCatTasksContainerDiv");
+
 firstCatTasksContainerDiv.setAttribute("class", "dropZone First");
+firstCatTasksContainerDiv.classList.add("tasksContainers");
 const firstCatButtonDiv = document.createElement("div");
 firstCatButtonDiv.setAttribute("id", "firstCatButtonDiv")
 firstCatButtonDiv.setAttribute("class", "addTaskButtonDiv")
 firstCatButtonDiv.innerHTML = "Add new";
+const firstCatButtonPlusSign = document.createElement("div");
+firstCatButtonPlusSign.setAttribute("class", "buttonPlusSign");
+firstCatButtonPlusSign.innerHTML = "+";
+const firstCatButtonContainerDiv = document.createElement("div");
+firstCatButtonContainerDiv.setAttribute("class", "buttonContainerDiv");
+firstCatButtonContainerDiv.setAttribute("style", "display: flex; justify-content: space-between;")
+
+firstCatButtonContainerDiv.appendChild(firstCatButtonDiv);
+firstCatButtonContainerDiv.appendChild(firstCatButtonPlusSign);
+
 
 firstCatContentContainerDiv.appendChild(firstCatTasksContainerDiv);
-firstCatContentContainerDiv.appendChild(firstCatButtonDiv);
+firstCatContentContainerDiv.appendChild(firstCatButtonContainerDiv);
 
-firstCatButtonDiv.addEventListener("click", ()=>{
-    const parentDiv = firstCatButtonDiv.parentNode;
+firstCatButtonContainerDiv.addEventListener("click", ()=>{
+    const parentDiv = firstCatButtonContainerDiv.parentNode;
     console.log(parentDiv)
     const firstChildOfParentDiv  = parentDiv.firstChild;
     const createdTask = createTask();
@@ -95,7 +107,7 @@ categoryTitleDivForSecondCat.innerHTML = "In Progress"
 const categoryLogoDivForSecondCat = document.createElement("div");
 categoryLogoDivForSecondCat.setAttribute("class", "categoryLogoDiv");
 const logoImgSecondCat = document.createElement("img");
-logoImgSecondCat.setAttribute("src", "icons/grip-vertical.png");
+logoImgSecondCat.setAttribute("src", "icons/menu.png");
 logoImgSecondCat.setAttribute("class", "logoImg")
 
 categoryLogoDivForSecondCat.appendChild(logoImgSecondCat);
@@ -113,22 +125,32 @@ secondCatContentContainerDiv.setAttribute("id", "secondCatContentContainerDiv")
 const secondCatTasksContainerDiv = document.createElement("div");
 secondCatTasksContainerDiv.setAttribute("id", "secondCatTasksContainerDiv");
 secondCatTasksContainerDiv.setAttribute("class", "dropZone Second");
+secondCatTasksContainerDiv.classList.add("tasksContainers")
 const secondCatButtonDiv = document.createElement("div");
 secondCatButtonDiv.setAttribute("id", "secondCatButtonDiv")
 secondCatButtonDiv.setAttribute("class", "addTaskButtonDiv")
 secondCatButtonDiv.innerHTML = "Add new";
+const secondCatButtonPlusSign = document.createElement("div");
+secondCatButtonPlusSign.setAttribute("class", "buttonPlusSign");
+secondCatButtonPlusSign.innerHTML = "+";
+const secondCatButtonContainerDiv = document.createElement("div");
+secondCatButtonContainerDiv.setAttribute("class", "buttonContainerDiv");
+secondCatButtonContainerDiv.setAttribute("style", "display: flex; justify-content: space-between;")
+
+secondCatButtonContainerDiv.appendChild(secondCatButtonDiv);
+secondCatButtonContainerDiv.appendChild(secondCatButtonPlusSign);
+
 
 secondCatContentContainerDiv.appendChild(secondCatTasksContainerDiv);
-secondCatContentContainerDiv.appendChild(secondCatButtonDiv);
+secondCatContentContainerDiv.appendChild(secondCatButtonContainerDiv);
 
-secondCatButtonDiv.addEventListener("click", ()=>{
-    const parentDiv = secondCatButtonDiv.parentNode;
+secondCatButtonContainerDiv.addEventListener("click", ()=>{
+    const parentDiv = secondCatButtonContainerDiv.parentNode;
     console.log(parentDiv)
     const firstChildOfParentDiv  = parentDiv.firstChild;
     const createdTask = createTask();
     firstChildOfParentDiv.appendChild(createdTask);
     })
-
 inProgressCategoryDiv.appendChild(secondCatContentContainerDiv);
 
 
@@ -150,7 +172,7 @@ categoryTitleDivForThirdCat.innerHTML = "Under Review"
 const categoryLogoDivForThirdCat = document.createElement("div");
 categoryLogoDivForThirdCat.setAttribute("class", "categoryLogoDiv");
 const logoImgThirdCat = document.createElement("img");
-logoImgThirdCat.setAttribute("src", "icons/grip-vertical.png");
+logoImgThirdCat.setAttribute("src", "icons/menu.png");
 logoImgThirdCat.setAttribute("class", "logoImg")
 
 categoryLogoDivForThirdCat.appendChild(logoImgThirdCat);
@@ -163,26 +185,35 @@ underReviewCategoryDiv.appendChild(categoryTitleAndLogoContainerDivForThirdCat);
 
 
 const thirdCatContentContainerDiv = document.createElement("div");
-thirdCatContentContainerDiv.setAttribute("id", "thirdCatContentContainerDiv")
+thirdCatContentContainerDiv.setAttribute("id", "thirdCatContentContainerDiv");
 const thirdCatTasksContainerDiv = document.createElement("div");
 thirdCatTasksContainerDiv.setAttribute("id", "thirdCatTasksContainerDiv");
 thirdCatTasksContainerDiv.setAttribute("class", "dropZone Three");
+thirdCatTasksContainerDiv.classList.add("tasksContainers")
 const thirdCatButtonDiv = document.createElement("div");
-thirdCatButtonDiv.setAttribute("id", "thirdCatButtonDiv")
 thirdCatButtonDiv.setAttribute("class", "addTaskButtonDiv")
 thirdCatButtonDiv.innerHTML = "Add new";
+const thirdCatButtonPlusSign = document.createElement("div");
+thirdCatButtonPlusSign.setAttribute("class", "buttonPlusSign");
+thirdCatButtonPlusSign.innerHTML = "+";
+const thirdCatButtonContainerDiv = document.createElement("div");
+thirdCatButtonContainerDiv.setAttribute("class", "buttonContainerDiv");
+thirdCatButtonContainerDiv.setAttribute("style", "display: flex; justify-content: space-between;")
+
+thirdCatButtonContainerDiv.appendChild(thirdCatButtonDiv);
+thirdCatButtonContainerDiv.appendChild(thirdCatButtonPlusSign);
+
 
 thirdCatContentContainerDiv.appendChild(thirdCatTasksContainerDiv);
-thirdCatContentContainerDiv.appendChild(thirdCatButtonDiv);
+thirdCatContentContainerDiv.appendChild(thirdCatButtonContainerDiv);
 
-thirdCatButtonDiv.addEventListener("click", ()=>{
-    const parentDiv = thirdCatButtonDiv.parentNode;
+thirdCatButtonContainerDiv.addEventListener("click", ()=>{
+    const parentDiv = thirdCatButtonContainerDiv.parentNode;
     console.log(parentDiv)
     const firstChildOfParentDiv  = parentDiv.firstChild;
     const createdTask = createTask();
     firstChildOfParentDiv.appendChild(createdTask);
     })
-
 underReviewCategoryDiv.appendChild(thirdCatContentContainerDiv);
 
 
@@ -205,7 +236,7 @@ categoryTitleDivForFourthCat.innerHTML = "Finished"
 const categoryLogoDivForFourthCat = document.createElement("div");
 categoryLogoDivForFourthCat.setAttribute("class", "categoryLogoDiv");
 const logoImgFourthCat = document.createElement("img");
-logoImgFourthCat.setAttribute("src", "icons/grip-vertical.png");
+logoImgFourthCat.setAttribute("src", "icons/menu.png");
 logoImgFourthCat.setAttribute("class", "logoImg")
 
 categoryLogoDivForFourthCat.appendChild(logoImgFourthCat);
@@ -221,21 +252,31 @@ fourthCatContentContainerDiv.setAttribute("id", "fourthCatContentContainerDiv")
 const fourthCatTasksContainerDiv = document.createElement("div");
 fourthCatTasksContainerDiv.setAttribute("id", "fourthCatTasksContainerDiv");
 fourthCatTasksContainerDiv.setAttribute("class", "dropZone Four");
+fourthCatTasksContainerDiv.classList.add("tasksContainers")
 const fourthCatButtonDiv = document.createElement("div");
 fourthCatButtonDiv.setAttribute("id", "fourthCatButtonDiv")
 fourthCatButtonDiv.setAttribute("class", "addTaskButtonDiv")
 fourthCatButtonDiv.innerHTML = "Add new";
+const fourthCatButtonPlusSign = document.createElement("div");
+fourthCatButtonPlusSign.setAttribute("class", "buttonPlusSign");
+fourthCatButtonPlusSign.innerHTML = "+";
+const fourthCatButtonContainerDiv = document.createElement("div");
+fourthCatButtonContainerDiv.setAttribute("class", "buttonContainerDiv");
+fourthCatButtonContainerDiv.setAttribute("style", "display: flex; justify-content: space-between;")
+
+fourthCatButtonContainerDiv.appendChild(fourthCatButtonDiv);
+fourthCatButtonContainerDiv.appendChild(fourthCatButtonPlusSign);
+
 
 fourthCatContentContainerDiv.appendChild(fourthCatTasksContainerDiv);
-fourthCatContentContainerDiv.appendChild(fourthCatButtonDiv);
+fourthCatContentContainerDiv.appendChild(fourthCatButtonContainerDiv);
 
-fourthCatButtonDiv.addEventListener("click", ()=>{
-    const parentDiv = fourthCatButtonDiv.parentNode;
+fourthCatButtonContainerDiv.addEventListener("click", ()=>{
+    const parentDiv = fourthCatButtonContainerDiv.parentNode;
     console.log(parentDiv)
     const firstChildOfParentDiv  = parentDiv.firstChild;
     const createdTask = createTask();
     firstChildOfParentDiv.appendChild(createdTask);
-    
     })
 
 finishedCategoryDiv.appendChild(fourthCatContentContainerDiv);
@@ -260,20 +301,67 @@ bodyTag.appendChild(categoriesContainerDiv);
 
 // function for creating a task in the app
 function createTask(){
+    var descriptions = ["task description", "some description here", "context here", "task description here"]
+    var priorities = ["Low", "Medium", "Urgent"]
+    
     const taskContainerDiv = document.createElement("div");
-    taskContainerDiv.setAttribute("id", "taskContainerDiv");
     taskContainerDiv.setAttribute("class", "dragElement");
+    taskContainerDiv.classList.add("taskContainerDiv")
     taskContainerDiv.setAttribute("draggable", "true");
+    taskContainerDiv.setAttribute("style", "padding: 10px 10px 10px 10px; border-radius: 5px; margin-bottom: 5px;")
     const task = document.createElement("div");
-    task.setAttribute("id", "task");
+    task.setAttribute("class", "task");
     const taskName = document.createElement("div");
     taskName.innerHTML = "Task xyz";
-    taskName.setAttribute("id", "taskName");
+    taskName.setAttribute("class", "taskNames");
+    taskName.setAttribute("style", "font-weight: 900; font-size: 20px;")
+    const taskDescription  = document.createElement("div");
+    taskDescription.setAttribute("class", "taskDescriptions;");
+    taskDescription.setAttribute("style", "min-width: 200px; max-width: 200px; color: grey")
+    taskDescription.innerHTML = descriptions[Math.floor(Math.random()* descriptions.length)]
+    const taskPriority = document.createElement("div");
+    taskPriority.setAttribute("class", "taskPriorities");
+    taskPriority.setAttribute("style", "font-size: 10px;; margin-right: 5px; border-radius: 10px; padding:4px 6px 4px 6px;color: white;")
+    taskPriority.innerHTML = priorities[Math.floor(Math.random() * priorities.length)]
+    if(taskPriority.innerHTML=="Low"){
+        taskPriority.style.backgroundColor = "rgb(55, 223, 37)";
+    }else if(taskPriority.innerHTML=="Medium"){
+        taskPriority.style.backgroundColor = "rgb(248, 156, 64)";
+    }else if(taskPriority.innerHTML=="Urgent"){
+        taskPriority.style.backgroundColor = "rgb(249, 71, 71)";
+    }
+    const taskDate = document.createElement("div");
+    taskDate.setAttribute("class", "taskDates");
+    taskDate.innerHTML = "Jan 22, 2024";
+    taskDate.setAttribute("style", "font-size: 10px; color: grey")
+    const taskStartTime = document.createElement("div");
+    taskStartTime.setAttribute("class", "taskStartTimes");
+    taskStartTime.setAttribute("style", "font-size: 10px; color: grey");
+    taskStartTime.innerHTML = "1 hr ago";
+    const taskPriorityDateTimeContainer = document.createElement("div");
+    taskPriorityDateTimeContainer.setAttribute("class", "taskPriorityDateTimeContainer");
+    const taskPriorityAndDateContainer = document.createElement("div");
+    taskPriorityAndDateContainer.setAttribute("class", "taskPriorityAndDateContainer");
+    const dateLogoAndDateContainer = document.createElement("div");
+    dateLogoAndDateContainer.setAttribute("class", "dateLogoAndDateContainer");
+    const dateLogo = document.createElement("img");
+    dateLogo.setAttribute("src", "icons/clock.png");
+    dateLogo.setAttribute("class", "dateLogo");
+    dateLogo.setAttribute("style", "height: 15px; width: 15px; margin-right: 3px;")
+    dateLogoAndDateContainer.appendChild(dateLogo);
+    dateLogoAndDateContainer.appendChild(taskDate);
+    taskPriorityAndDateContainer.append(taskPriority);
+    taskPriorityAndDateContainer.append(dateLogoAndDateContainer);
+    taskPriorityDateTimeContainer.append(taskPriorityAndDateContainer);
+    taskPriorityDateTimeContainer.append(taskStartTime);
     task.appendChild(taskName);
+    task.append(taskDescription);
+    task.append(taskPriorityDateTimeContainer);
+    
     taskContainerDiv.appendChild(task);
 
     taskContainerDiv.addEventListener("dragstart", (e) => {
-        taskContainerDiv.classList.add("dragging"); // Optional: for styling
+        taskContainerDiv.classList.add("dragging");
     });
 
     taskContainerDiv.addEventListener("dragend", () => {
@@ -301,7 +389,7 @@ dropZoneSet.forEach(dropzone => {
 
         if(draggingElement){
             dropzone.appendChild(draggingElement);
-        }
+        };
     });
 });
 
