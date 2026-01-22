@@ -124,6 +124,29 @@ categoryTitleAndLogoContainerDivForFourthCat.appendChild(categoryLogoDivForFourt
 finishedCategoryDiv.appendChild(categoryTitleAndLogoContainerDivForFourthCat);
 
 
+const fourthCatContentContainerDiv = document.createElement("div");
+fourthCatContentContainerDiv.setAttribute("id", "fourthCatContentContainerDiv")
+const fourthCatTasksContainerDiv = document.createElement("div");
+fourthCatTasksContainerDiv.setAttribute("id", "fourthCatTasksContainerDiv");
+const fourthCatButtonDiv = document.createElement("div");
+fourthCatButtonDiv.setAttribute("id", "fourthCatButtonDiv")
+fourthCatButtonDiv.setAttribute("class", "addTaskButtonDiv")
+fourthCatButtonDiv.innerHTML = "Add new";
+
+fourthCatContentContainerDiv.appendChild(fourthCatTasksContainerDiv);
+fourthCatContentContainerDiv.appendChild(fourthCatButtonDiv);
+
+fourthCatButtonDiv.addEventListener("click", ()=>{
+    const parentDiv = fourthCatButtonDiv.parentNode;
+    console.log(parentDiv)
+    const firstChildOfParentDiv  = parentDiv.firstChild;
+    const createdTask = createTask();
+    firstChildOfParentDiv.appendChild(createdTask);
+    })
+
+finishedCategoryDiv.appendChild(fourthCatContentContainerDiv);
+
+
 
 
 
@@ -140,8 +163,19 @@ categoriesContainerDiv.appendChild(finishedCategoryDiv);
 bodyTag.appendChild(categoriesContainerDiv);
 
 
+function createTask(){
+    const taskContainerDiv = document.createElement("div");
+    taskContainerDiv.setAttribute("id", "taskContainerDiv");
+    const task = document.createElement("div");
+    task.setAttribute("id", "task");
+    const taskName = document.createElement("div");
+    taskName.innerHTML = "Task xyz";
+    taskName.setAttribute("id", "taskName");
+    task.appendChild(taskName);
+    taskContainerDiv.appendChild(task);
 
-
+    return taskContainerDiv;
+}
 
 
 
